@@ -1,12 +1,68 @@
-﻿<Window x:Class="Prog_122_L6_Notes_Week4.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Prog_122_L6_Notes_Week4"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+﻿<Window
+    x:Class="Prog_122_L6_Notes_Week4.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Prog_122_L6_Notes_Week4"
+    mc:Ignorable="d"
+    Title="MainWindow"
+    Height="450"
+    Width="800">
+    <Canvas>
+        <ListBox
+            x:Name="lbDisplay"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Height="217"
+            VerticalAlignment="Top"
+            Canvas.Left="123"
+            Canvas.Top="118"
+            Width="243"
+            SelectionChanged="lbDisplay_SelectionChanged" />
+        <Label
+            x:Name="lblCurrentSectionIndex"
+            Content="Label"
+            Canvas.Left="223"
+            Canvas.Top="45"
+            FontSize="14" />
+        <Label
+            x:Name="lblCurrentSelectedItem"
+            Content="Label"
+            Canvas.Left="452"
+            Canvas.Top="45" />
+        <ComboBox
+            x:Name="cmbNames"
+            Canvas.Left="123"
+            Canvas.Top="79"
+            Width="259"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            SelectionChanged="cmbNames_SelectionChanged" />
+        <Label
+            x:Name="lblCmbSlectedIndex"
+            Content="Label"
+            Canvas.Left="587"
+            Canvas.Top="48"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Width="51" />
+        <TextBox
+            x:Name="txtAddToList"
+            Canvas.Left="471"
+            TextWrapping="Wrap"
+            Canvas.Top="304"
+            Width="283"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" />
+        <Button
+            x:Name="btnAddToList"
+            Content="Add to List"
+            Canvas.Left="411"
+            Canvas.Top="379"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Width="99"
+            Click="btnAddToList_Click" />
 
-    </Grid>
+    </Canvas>
 </Window>
